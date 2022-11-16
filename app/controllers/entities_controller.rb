@@ -38,7 +38,6 @@ class EntitiesController < ApplicationController
         end
     end
     
-      # DELETE /transactions/1 or /transactions/1.json
     def destroy
         @transaction.destroy
 
@@ -50,7 +49,6 @@ class EntitiesController < ApplicationController
     
     private
 
-    # Use callbacks to share common setup or constraints between actions.
     def set_transaction
         @transaction = Transaction.find(params[:id])
     end
@@ -59,7 +57,6 @@ class EntitiesController < ApplicationController
         @group = Group.find(params[:group_id])
     end
 
-    # Only allow a list of trusted parameters through.
     def transaction_params
         params.require(:transaction).permit(:name, :amount).merge(user_id: current_user.id)
     end
