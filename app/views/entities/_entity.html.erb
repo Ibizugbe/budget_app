@@ -1,0 +1,6 @@
+ <%= link_to edit_group_entity_path(@group, entity), class:"card_link" do %>
+  <div class="group_card">
+    <p><%= entity.name %></p>
+    <p>$ <%= entity.amount %></p>
+  </div>
+<% end %>

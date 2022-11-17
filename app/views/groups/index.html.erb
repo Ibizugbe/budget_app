@@ -1,0 +1,13 @@
+<p class="text-success"><%= notice %></p>
+
+<h1>Groups</h1>
+
+<div class="cards_list">
+  <% @groups.each do |group| %>
+    <%= link_to group, class:"card_link" do %>
+      <%= render group %>
+    <% end %>
+  <% end %>
+</div>
+
+<%= link_to "New group", new_group_path, class: "category_button"%>
