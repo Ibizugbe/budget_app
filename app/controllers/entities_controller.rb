@@ -60,4 +60,8 @@ class EntitiesController < ApplicationController
     def transaction_params
         params.require(:transaction).permit(:name, :amount).merge(user_id: current_user.id)
     end
+
+    def entity_params
+        params.require(:entity).permit(:name, :amount).merge(user_id: current_user.id, group_id: @group.id)
+    end
 end
