@@ -92,9 +92,9 @@ For you to see the styling being applied in the browser during development
 
 👤 **Abraham Ibizugbe**
 
-- GitHub: [@NickEmma](https://github.com/ibizugbe)
-- Twitter: [@techieEmma](https://twitter.com/abrahamibizugbe)
-- LinkedIn: [@Nicholas Emmanuel](https://www.linkedin.com/in/abrahamibizugbe/)
+- GitHub: [@ibizugbe](https://github.com/ibizugbe)
+- Twitter: [@anrahamibizugbe](https://twitter.com/abrahamibizugbe)
+- LinkedIn: [Abraham Ibizugbe](https://www.linkedin.com/in/abrahamibizugbe/)
 
 ## 🤝 Contributing
 
