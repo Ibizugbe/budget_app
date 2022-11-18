@@ -3,13 +3,9 @@
         <div class='welcome-container'>
             <h1 class='fw-bold text-success text-center pt-5 mt-5' style="font-size: 50px !important;">iManager</h1>
         </div>
-        <%if current_user%>
-            <h2 class="welcome">Welcome, <%= current_user.name %>!</h2>
-        <% end %>
         <div class='main-btns px-4 mt-5'>
             <%if current_user%>
-                <%= link_to "Categories", groups_path, class:"app_button standard_button" %>
-                <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"app_button red_button" %>
+                <%= link_to "Categories", groups_path, class:"d-block btn btn-success p-2" %>
             <% else %>
                 <%= link_to "Log In", new_user_session_path, class:"d-block btn btn-success p-3 text-white" %>
                 <%= link_to "Sign Up", new_user_registration_path, class:"d-block mt-3 p-3 btn btn-outline-success text-success" %>

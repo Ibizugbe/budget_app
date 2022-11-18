@@ -1,9 +1,7 @@
-<h1>Add New group</h1>
+<h1 class="text-primary text-center mt-5 mb-3">Add New Category</h1>
 
 <%= render "form", group: @group %>
 
-<br>
-
-<div>
-  <%= link_to "Back to groups", groups_path %>
+<div class="d-flex justify-content-center">
+  <%= link_to "Back to groups", groups_path, class: "btn btn-outline-primary mt-3" %>
 </div>

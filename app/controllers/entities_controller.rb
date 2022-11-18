@@ -28,18 +28,18 @@ class EntitiesController < ApplicationController
 
   def update
     respond_to do |format|
-      if @transaction.update(transaction_params)
+      if @entity.update(entity_params)
         format.html { redirect_to @group, notice: 'Transaction was successfully updated.' }
-        format.json { render :show, status: :ok, location: @transaction }
+        format.json { render :show, status: :ok, location: @entity }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @transaction.errors, status: :unprocessable_entity }
+        format.json { render json: @entity.errors, status: :unprocessable_entity }
       end
     end
   end
 
   def destroy
-    @transaction.destroy
+    @entity.destroy
 
     respond_to do |format|
       format.html { redirect_to @group, notice: 'Transaction was successfully destroyed.' }
@@ -49,19 +49,15 @@ class EntitiesController < ApplicationController
 
   private
 
-  def set_transaction
-    @transaction = Transaction.find(params[:id])
+  def set_entity
+    @entity = Entity.find(params[:id])
   end
 
   def set_group
     @group = Group.find(params[:group_id])
   end
 
-  def transaction_params
-    params.require(:transaction).permit(:name, :amount).merge(user_id: current_user.id)
-  end
-
   def entity_params
-    params.require(:entity).permit(:name, :amount).merge(user_id: current_user.id, group_id: @group.id)
+    params.require(:entity).permit(:name, :amount).merge(user_id: current_user.id)
   end
 end
