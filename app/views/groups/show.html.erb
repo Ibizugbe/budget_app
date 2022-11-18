@@ -1,18 +1,19 @@
-<p class="text-success"><%= notice %></p>
-
-<div>
+<div class="card col-12 mt-2 border-0 p-3" >
     <%= link_to edit_group_path(@group) do %>
         <%= render @group %>
-    <% end %>
+    <% end %> 
 </div>
 
-<div>
-  <%= button_to "Remove Category", @group, method: :delete %>
+<div class="d-flex justify-content-center mt-3">
+  <%= button_to "Remove Category", @group, method: :delete, class:"btn btn-danger" %>
 </div>
 
+<h1 class="text-center text-primary my-3">My Transactions<h1>
 
-<div>
-  <h1>Transactions<h1>
+<div class="text-success">
+    <%= render @group.entities.order(created_at: :desc) %>
+</div> 
 
-  <%= link_to "New Entity", new_group_entity_path(@group), class: "category_button"%>
+<div class="d-flex justify-content-center">
+  <%= link_to "New Transaction", new_group_entity_path(@group), class: "btn btn-outline-success"%>
 </div>

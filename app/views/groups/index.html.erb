@@ -1,13 +1,17 @@
-<p class="text-success"><%= notice %></p>
+<main>
+  <h1 class="text-primary fw-bold text-center mt-5 mb-4">Categories</h1>
 
-<h1>Groups</h1>
-
-<div class="cards_list">
-  <% @groups.each do |group| %>
-    <%= link_to group, class:"card_link" do %>
-      <%= render group %>
+  <div class="cards_list">
+    <% @groups.each do |group| %>
+      <%= link_to group, class:"card_link" do %>
+        <%= render group %>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
+  </div>
 
-<%= link_to "New group", new_group_path, class: "category_button"%>
+  <div class="d-flex justify-content-center">
+    <%= link_to "Add Categories", new_group_path, class: "btn btn-outline-primary col-7"%>
+  </div>
+</main>
+
+
