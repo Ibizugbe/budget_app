@@ -1,0 +1,6 @@
+ <%= link_to edit_group_entity_path(@group, entity), class:"card_link" do %>
+  <div class="d-flex justify-content-between">
+    <p class='color'><%= entity.name %></p>
+    <p class='color'>$ <%= entity.amount %></p>
+  </div>
+<% end %>
